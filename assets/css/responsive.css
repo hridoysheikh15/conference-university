@@ -1,0 +1,258 @@
+/* =========================================================================
+   ICP 2026 — Responsive Rules
+   Breakpoints follow Bootstrap 5.3: xl 1200, lg 992, md 768, sm 576
+   ========================================================================= */
+
+/* ----- Large desktops / laptops (<=1200px) ----- */
+@media (max-width: 1200px) {
+  :root {
+    --section-pad: 5.5rem;
+  }
+  .orbit-system {
+    width: 360px;
+    height: 360px;
+  }
+  .orbit-ring.r3 {
+    width: 340px;
+    height: 340px;
+  }
+  .orbit-ring.r2 {
+    width: 240px;
+    height: 240px;
+  }
+  .orbit-ring.r1 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ----- Tablets landscape (<=992px) ----- */
+@media (max-width: 992px) {
+  :root {
+    --section-pad: 4.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding-top: 7.5rem;
+    padding-bottom: 3rem;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .hero-meta {
+    justify-content: center;
+  }
+  .hero-subtitle {
+    margin-inline: auto;
+  }
+  .hero-visual {
+    height: 340px;
+    margin-top: 2rem;
+  }
+  .orbit-system {
+    width: 300px;
+    height: 300px;
+  }
+  .orbit-ring.r3 {
+    width: 280px;
+    height: 280px;
+  }
+  .orbit-ring.r2 {
+    width: 190px;
+    height: 190px;
+  }
+  .orbit-ring.r1 {
+    width: 120px;
+    height: 120px;
+  }
+  .orbit-nucleus {
+    width: 84px;
+    height: 84px;
+    font-size: 2rem;
+  }
+
+  .countdown-grid {
+    gap: 1rem;
+  }
+  .countdown-number {
+    font-size: 2.2rem;
+  }
+
+  .about-media {
+    margin-bottom: 3rem;
+  }
+  .about-media .floating-card {
+    right: 0;
+  }
+
+  .schedule-timeline::before {
+    left: 28px;
+  }
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 70px;
+    padding-right: 0;
+  }
+  .timeline-node {
+    left: 28px;
+  }
+  .timeline-card {
+    max-width: 100%;
+  }
+
+  .gallery-grid {
+    column-count: 2;
+  }
+
+  .venue-card {
+    margin-bottom: 2rem;
+  }
+}
+
+/* ----- Tablets portrait / large phones (<=768px) ----- */
+@media (max-width: 768px) {
+  :root {
+    --section-pad: 3.75rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .section-head {
+    margin-bottom: 2.2rem;
+  }
+
+  .navbar-brand-group img {
+    height: 34px;
+  }
+  .brand-text .brand-main {
+    font-size: 0.92rem;
+  }
+  .brand-text .brand-sub {
+    font-size: 0.6rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+  .hero-badge {
+    font-size: 0.7rem;
+  }
+  .hero-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .countdown-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    margin-bottom: 2rem;
+  }
+
+  .gallery-grid {
+    column-count: 1;
+  }
+
+  .registration-banner {
+    padding: 2.6rem 1.4rem;
+  }
+
+  .contact-form-card {
+    padding: 1.6rem;
+  }
+  .contact-info-card {
+    padding: 2rem 1.4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* ----- Mobile phones (<=576px) ----- */
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 6.5rem;
+  }
+  .hero-visual {
+    height: 260px;
+  }
+  .orbit-system {
+    width: 230px;
+    height: 230px;
+  }
+  .orbit-ring.r3 {
+    width: 210px;
+    height: 210px;
+  }
+  .orbit-ring.r2 {
+    width: 150px;
+    height: 150px;
+  }
+  .orbit-ring.r1 {
+    width: 95px;
+    height: 95px;
+  }
+  .orbit-nucleus {
+    width: 66px;
+    height: 66px;
+    font-size: 1.5rem;
+  }
+  .floating-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+
+  .countdown-card {
+    padding: 1.2rem 0.4rem;
+  }
+  .countdown-number {
+    font-size: 1.7rem;
+  }
+  .countdown-label {
+    font-size: 0.62rem;
+  }
+
+  .topic-card {
+    padding: 1.6rem 1.3rem;
+  }
+
+  .schedule-timeline::before {
+    left: 22px;
+  }
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    padding-left: 56px;
+  }
+  .timeline-node {
+    left: 22px;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  .speaker-avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .registration-banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .back-to-top {
+    right: 1.1rem;
+    bottom: 1.1rem;
+    width: 42px;
+    height: 42px;
+  }
+}
