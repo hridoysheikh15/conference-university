@@ -606,6 +606,7 @@ ul {
   position: relative;
   background: var(--grad-blue-orange);
   padding-block: 5rem;
+  margin-top: 5rem;
   overflow: hidden;
 }
 .countdown-section::before {
@@ -733,62 +734,6 @@ ul {
   font-size: 0.85rem;
   color: var(--gray-600);
   margin: 0;
-}
-
-/* =========================================================================
-   Stats
-   ========================================================================= */
-.stats-section {
-  background: var(--blue-900);
-  position: relative;
-  overflow: hidden;
-}
-.stats-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at 90% 10%,
-    rgba(255, 122, 41, 0.18),
-    transparent 45%
-  );
-}
-.stat-card {
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-.stat-number {
-  font-family: var(--font-mono);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.15rem;
-}
-.stat-number .plus {
-  color: var(--orange-400);
-}
-.stat-label {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.92rem;
-  margin-top: 0.4rem;
-  letter-spacing: 0.02em;
-}
-.stat-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--orange-400);
-  font-size: 1.4rem;
-  margin: 0 auto 1rem;
 }
 
 /* =========================================================================
