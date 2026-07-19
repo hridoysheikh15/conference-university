@@ -8,22 +8,6 @@
   :root {
     --section-pad: 5.5rem;
   }
-  .orbit-system {
-    width: 360px;
-    height: 360px;
-  }
-  .orbit-ring.r3 {
-    width: 340px;
-    height: 340px;
-  }
-  .orbit-ring.r2 {
-    width: 240px;
-    height: 240px;
-  }
-  .orbit-ring.r1 {
-    width: 150px;
-    height: 150px;
-  }
 }
 
 /* ----- Tablets landscape (<=992px) ----- */
@@ -40,36 +24,12 @@
   .hero-actions {
     justify-content: center;
   }
-  .hero-meta {
-    justify-content: center;
-  }
   .hero-subtitle {
     margin-inline: auto;
   }
-  .hero-visual {
-    height: 340px;
-    margin-top: 2rem;
-  }
-  .orbit-system {
-    width: 300px;
-    height: 300px;
-  }
-  .orbit-ring.r3 {
-    width: 280px;
-    height: 280px;
-  }
-  .orbit-ring.r2 {
-    width: 190px;
-    height: 190px;
-  }
-  .orbit-ring.r1 {
-    width: 120px;
-    height: 120px;
-  }
-  .orbit-nucleus {
-    width: 84px;
-    height: 84px;
-    font-size: 2rem;
+  .hero-info-row {
+    gap: 1.1rem;
+    padding: 0.9rem 1.3rem;
   }
 
   .countdown-grid {
@@ -79,11 +39,8 @@
     font-size: 2.2rem;
   }
 
-  .about-media {
-    margin-bottom: 3rem;
-  }
-  .about-media .floating-card {
-    right: 0;
+  .committee-card {
+    margin-bottom: 1.5rem;
   }
 
   .schedule-timeline::before {
@@ -102,8 +59,8 @@
     max-width: 100%;
   }
 
-  .gallery-grid {
-    column-count: 2;
+  .speaker-carousel-wrap {
+    padding: 0 2.4rem;
   }
 
   .venue-card {
@@ -140,9 +97,17 @@
   .hero-badge {
     font-size: 0.7rem;
   }
+  .hero-info-row {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .hero-info-divider {
+    display: none;
+  }
   .hero-actions .btn {
     width: 100%;
     text-align: center;
+    justify-content: center;
   }
   .hero-actions {
     flex-direction: column;
@@ -152,16 +117,23 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-highlights {
-    grid-template-columns: 1fr;
-  }
-
   .stat-card {
     margin-bottom: 2rem;
   }
 
-  .gallery-grid {
-    column-count: 1;
+  .speaker-filters {
+    gap: 0.5rem;
+  }
+  .filter-btn {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.8rem;
+  }
+  .speaker-carousel-wrap {
+    padding: 0 1.8rem;
+  }
+  .speakers-nav {
+    width: 38px;
+    height: 38px;
   }
 
   .registration-banner {
@@ -182,35 +154,6 @@
   .hero {
     padding-top: 6.5rem;
   }
-  .hero-visual {
-    height: 260px;
-  }
-  .orbit-system {
-    width: 230px;
-    height: 230px;
-  }
-  .orbit-ring.r3 {
-    width: 210px;
-    height: 210px;
-  }
-  .orbit-ring.r2 {
-    width: 150px;
-    height: 150px;
-  }
-  .orbit-ring.r1 {
-    width: 95px;
-    height: 95px;
-  }
-  .orbit-nucleus {
-    width: 66px;
-    height: 66px;
-    font-size: 1.5rem;
-  }
-  .floating-icon {
-    width: 42px;
-    height: 42px;
-    font-size: 1.1rem;
-  }
 
   .countdown-card {
     padding: 1.2rem 0.4rem;
@@ -222,8 +165,8 @@
     font-size: 0.62rem;
   }
 
-  .topic-card {
-    padding: 1.6rem 1.3rem;
+  .topic-list-item {
+    padding: 1rem;
   }
 
   .schedule-timeline::before {
@@ -243,6 +186,12 @@
   .speaker-avatar {
     width: 96px;
     height: 96px;
+  }
+  .speaker-carousel-wrap {
+    padding: 0 1rem;
+  }
+  .speakers-nav {
+    display: none;
   }
 
   .registration-banner h2 {

@@ -186,19 +186,7 @@
   }
 
   /* ---------------------------------------------------------------------
-     7. Vanilla Tilt — subtle tilt on speaker / topic cards (optional)
-     --------------------------------------------------------------------- */
-  if (window.VanillaTilt) {
-    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
-      max: 6,
-      speed: 400,
-      glare: true,
-      "max-glare": 0.12,
-    });
-  }
-
-  /* ---------------------------------------------------------------------
-     8. Swiper — Sponsors carousel
+     7. Swiper — Sponsors carousel
      --------------------------------------------------------------------- */
   if (window.Swiper) {
     new Swiper(".sponsors-swiper", {
@@ -215,33 +203,146 @@
   }
 
   /* ---------------------------------------------------------------------
-     9. Gallery Lightbox (lightweight, dependency-free)
+     8. Speakers — data-driven, filterable Swiper carousel
      --------------------------------------------------------------------- */
-  const $lightbox = $(".lightbox-overlay");
-  const $lightboxImg = $lightbox.find("img");
+  const speakersData = [
+    {
+      type: "keynote",
+      img: "https://picsum.photos/id/1005/400/400",
+      name: "Prof. Dr. A. K. M. Rahman",
+      designation: "Head, Physics Discipline",
+      workplace: "Khulna University, Bangladesh",
+      message:
+        "It is a privilege to welcome physicists from around the world to Khulna University for a conference built on genuine scientific exchange.",
+      links: [
+        { label: "University Profile", url: "#", icon: "ri-links-line" },
+        { label: "Google Scholar", url: "#", icon: "ri-graduation-cap-line" },
+      ],
+    },
+    {
+      type: "keynote",
+      img: "https://picsum.photos/id/1012/400/400",
+      name: "Prof. Dr. Farida Yesmin",
+      designation: "Vice-Chancellor",
+      workplace: "Khulna University, Bangladesh",
+      message:
+        "ICP 2026 reflects our commitment to positioning Khulna University at the centre of international physics research and collaboration.",
+      links: [{ label: "Official Profile", url: "#", icon: "ri-links-line" }],
+    },
+    {
+      type: "keynote",
+      img: "https://picsum.photos/id/1027/400/400",
+      name: "Dr. Michael Chen",
+      designation: "Professor, Department of Physics",
+      workplace: "National University of Singapore",
+      message:
+        "Condensed matter research thrives when researchers from different traditions sit down together — that's exactly what this conference offers.",
+      links: [
+        { label: "Google Scholar", url: "#", icon: "ri-graduation-cap-line" },
+        { label: "ResearchGate", url: "#", icon: "ri-links-line" },
+      ],
+    },
+    {
+      type: "invited",
+      img: "https://picsum.photos/id/1011/400/400",
+      name: "Dr. Anika Sharma",
+      designation: "Associate Professor, Department of Physics",
+      workplace: "Indian Institute of Technology, Delhi",
+      message: "Thematic Areas: Condensed Matter Physics and Nanomaterials.",
+      links: [
+        { label: "Google Scholar", url: "#", icon: "ri-graduation-cap-line" },
+      ],
+    },
+    {
+      type: "invited",
+      img: "https://picsum.photos/id/1074/400/400",
+      name: "Dr. Farhan Ahmed",
+      designation: "Associate Professor, Department of Physics",
+      workplace: "University of Dhaka, Bangladesh",
+      message: "Thematic Areas: Astrophysics and Observational Cosmology.",
+      links: [
+        { label: "Google Scholar", url: "#", icon: "ri-graduation-cap-line" },
+        { label: "ORCID", url: "#", icon: "ri-links-line" },
+      ],
+    },
+    {
+      type: "invited",
+      img: "https://picsum.photos/id/1062/400/400",
+      name: "Dr. Nasrin Akter",
+      designation: "Assistant Professor, Physics Discipline",
+      workplace: "Khulna University, Bangladesh",
+      message:
+        "Thematic Areas: Renewable Energy Physics and Materials Science.",
+      links: [{ label: "ResearchGate", url: "#", icon: "ri-links-line" }],
+    },
+  ];
 
-  $(document).on("click", ".gallery-item img", function () {
-    const fullSrc = $(this).data("full") || $(this).attr("src");
-    $lightboxImg.attr("src", fullSrc);
-    $lightbox.addClass("active");
-    $("body").css("overflow", "hidden");
-  });
+  function speakerSlideHtml(sp) {
+    const badgeClass = sp.type === "invited" ? "type-invited" : "";
+    const badgeLabel =
+      sp.type === "invited" ? "Invited Speaker" : "Keynote Speaker";
+    const linksHtml = sp.links
+      .map(
+        (l) =>
+          `<li><a href="${l.url}" target="_blank" rel="noopener noreferrer"><i class="${l.icon}"></i> ${l.label}</a></li>`,
+      )
+      .join("");
 
-  function closeLightbox() {
-    $lightbox.removeClass("active");
-    $("body").css("overflow", "");
+    return `
+      <div class="swiper-slide" data-type="${sp.type}">
+        <div class="speaker-card">
+          <div class="speaker-avatar"><img src="${sp.img}" alt="${sp.name} portrait" loading="lazy" /></div>
+          <span class="speaker-type-badge ${badgeClass}">${badgeLabel}</span>
+          <h5>${sp.name}</h5>
+          <div class="speaker-desig">${sp.designation}<br>${sp.workplace}</div>
+          <p class="speaker-message">&ldquo;${sp.message}&rdquo;</p>
+          <div class="speaker-links">
+            <span class="speaker-links-title">Professional Links</span>
+            <ul>${linksHtml}</ul>
+          </div>
+        </div>
+      </div>`;
   }
-  $(".lightbox-close, .lightbox-overlay").on("click", function (e) {
-    if (e.target === this || $(e.target).hasClass("lightbox-close")) {
-      closeLightbox();
+
+  let speakersSwiper = null;
+
+  function renderSpeakers(filter) {
+    const filtered =
+      filter === "all"
+        ? speakersData
+        : speakersData.filter((sp) => sp.type === filter);
+    const $wrapper = $("#speakersWrapper");
+    $wrapper.html(filtered.map(speakerSlideHtml).join(""));
+
+    if (speakersSwiper) {
+      speakersSwiper.destroy(true, true);
+      speakersSwiper = null;
     }
-  });
-  $(document).on("keyup", function (e) {
-    if (e.key === "Escape") closeLightbox();
+    if (window.Swiper) {
+      speakersSwiper = new Swiper(".speakers-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        watchOverflow: true,
+        navigation: { nextEl: ".speakers-next", prevEl: ".speakers-prev" },
+        pagination: { el: ".speakers-pagination", clickable: true },
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          992: { slidesPerView: 3 },
+        },
+      });
+    }
+  }
+
+  renderSpeakers("all");
+
+  $(".filter-btn").on("click", function () {
+    $(".filter-btn").removeClass("active");
+    $(this).addClass("active");
+    renderSpeakers($(this).data("filter"));
   });
 
   /* ---------------------------------------------------------------------
-     10. Contact Form — front-end only validation & confirmation
+     9. Contact Form — front-end only validation & confirmation
      --------------------------------------------------------------------- */
   const $contactForm = $("#contactForm");
   $contactForm.on("submit", function (e) {
@@ -265,23 +366,5 @@
       $contactForm.removeClass("was-validated");
       setTimeout(() => $btn.html(originalText), 2500);
     }, 1200);
-  });
-
-  /* ---------------------------------------------------------------------
-     11. Registration Form (if present) — same soft-submit pattern
-     --------------------------------------------------------------------- */
-  const $regForm = $("#registerForm");
-  $regForm.on("submit", function (e) {
-    e.preventDefault();
-    if (!this.checkValidity()) {
-      e.stopPropagation();
-      $(this).addClass("was-validated");
-      return;
-    }
-    alert(
-      "Thank you for registering! A confirmation email will be sent shortly.",
-    );
-    $regForm[0].reset();
-    $regForm.removeClass("was-validated");
   });
 })(jQuery);

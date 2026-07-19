@@ -21,11 +21,9 @@
   <!-- Bootstrap 5.3 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Remixicon -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
   <!-- AOS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <!-- Animate.css -->
-  <link href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" rel="stylesheet" />
   <!-- Swiper -->
   <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
 
@@ -38,10 +36,7 @@
 
   <!-- ============================ Preloader ============================ -->
   <div id="preloader">
-    <div class="orbit-loader">
-      <span></span>
-      <span></span>
-    </div>
+    <div class="orbit-loader"><span></span><span></span></div>
   </div>
 
   <!-- ============================ Navbar ============================ -->
@@ -62,26 +57,35 @@
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
           <li class="nav-item"><a class="nav-link nav-link-custom active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#topics">Topics</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#topics">Conference Scope</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#committee">Committee</a></li>
           <li class="nav-item"><a class="nav-link nav-link-custom" href="#speakers">Speakers</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#schedule">Schedule</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#gallery">Gallery</a></li>
-          <!-- <li class="nav-item"><a class="nav-link nav-link-custom" href="#registration">Registration</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="authorGuidelineDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Author Guideline</a>
+            <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="authorGuidelineDropdown">
+              <li><a class="dropdown-item" href="#">Author Guidelines</a></li>
+              <li><a class="dropdown-item" href="#">Registration Fees</a></li>
+              <li><a class="dropdown-item" href="#">Accommodation</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#contact">Contact</a></li>
         </ul>
-        <!-- <a href="#registration" class="btn btn-brand btn-sm-pill ms-lg-4 mt-3 mt-lg-0">Register Now</a> -->
-        <a href="#contact" class="btn btn-brand btn-sm-pill ms-lg-4 mt-3 mt-lg-0">Contact</a>
+        <a href="https://example.com/submit-abstract" target="_blank" rel="noopener noreferrer"
+          class="btn btn-submit-abstract ms-lg-4 mt-3 mt-lg-0">
+          <i class="ri-file-upload-line me-1"></i> Submit Abstract Now
+        </a>
       </div>
     </div>
   </nav>
 
   <!-- ============================ Hero ============================ -->
   <header class="hero" id="home">
+    <div class="hero-bg-image"></div>
     <div class="hero-noise"></div>
     <div class="container hero-content">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 text-center">
           <span class="hero-badge" data-aos="fade-up">
             <span class="dot"></span> International Physics Conference 2026
           </span>
@@ -89,39 +93,38 @@
             Physics Conference
             <span class="accent">Khulna University</span>
           </h1>
-          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="hero-info-row" data-aos="fade-up" data-aos-delay="150">
+            <div class="hero-info-item">
+              <i class="ri-calendar-2-line"></i>
+              <div>
+                <span class="hero-info-label">Date</span>
+                <span class="hero-info-value">10–12 December, 2026</span>
+              </div>
+            </div>
+            <div class="hero-info-divider"></div>
+            <div class="hero-info-item">
+              <i class="ri-map-pin-line"></i>
+              <div>
+                <span class="hero-info-label">Venue</span>
+                <span class="hero-info-value">Khulna University, Bangladesh</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="hero-subtitle mx-auto" data-aos="fade-up" data-aos-delay="200">
             ICP 2026 brings together physicists, researchers and students from across the globe to
             share discoveries in <span id="typed-topics" class="fw-semibold text-white"></span> — three days
             of keynotes, technical sessions and collaboration hosted by the Physics Discipline, Khulna University.
           </p>
-          <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
-            <a href="#speakers" class="btn btn-brand">
-              <i class="ri-user-add-line me-1"></i> Honorable Guests
+          <div class="hero-actions justify-content-center" data-aos="fade-up" data-aos-delay="300">
+            <a href="https://example.com/submit-abstract" target="_blank" rel="noopener noreferrer"
+              class="btn btn-submit-abstract">
+              <i class="ri-file-upload-line me-1"></i> Submit Abstract Now
             </a>
             <a href="#schedule" class="btn btn-outline-brand">
               <i class="ri-calendar-event-line me-1"></i> View Schedule
             </a>
-          </div>
-          <div class="hero-meta" data-aos="fade-up" data-aos-delay="400">
-            <div class="hero-meta-item"><i class="ri-calendar-2-line"></i> 10–12 December, 2026</div>
-            <div class="hero-meta-item"><i class="ri-map-pin-line"></i> Khulna University, Bangladesh</div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="hero-visual" data-aos="zoom-in" data-aos-delay="200">
-            <div class="orbit-system">
-              <div class="orbit-ring r1"></div>
-              <div class="orbit-ring r2"></div>
-              <div class="orbit-ring r3"></div>
-              <div class="orbit-nucleus"><i class="ri-atom-line"></i></div>
-              <div class="orbit-electron electron-1"></div>
-              <div class="orbit-electron electron-2"></div>
-              <div class="orbit-electron electron-3"></div>
-              <div class="floating-icon fi-1 animate__animated animate__fadeIn"><i class="ri-flask-line"></i></div>
-              <div class="floating-icon fi-2 animate__animated animate__fadeIn"><i class="ri-microscope-line"></i></div>
-              <div class="floating-icon fi-3 animate__animated animate__fadeIn"><i class="ri-lightbulb-line"></i></div>
-              <div class="floating-icon fi-4 animate__animated animate__fadeIn"><i class="ri-earth-line"></i></div>
-            </div>
           </div>
         </div>
       </div>
@@ -166,64 +169,45 @@
     </div>
   </section>
 
-  <!-- ============================ About ============================ -->
-  <section class="section-pad" id="about">
+  <!-- ============================ Committee ============================ -->
+  <section class="section-pad" id="committee">
     <div class="container">
-      <div class="row align-items-center gy-5">
-        <div class="col-lg-5">
-          <div class="about-media" data-aos="fade-right">
-            <div class="media-frame">
-              <img src="https://i.postimg.cc/Bn3NqFjd/Chat-GPT-Image-Jul-14-2026-05-23-31-PM.png"
-                alt="Physics Discipline conference hall" loading="lazy" />
-            </div>
-            <div class="floating-card animate__animated animate__fadeInUp">
-              <div class="icon-box"><i class="ri-award-line"></i></div>
-              <div>
-                <strong>15+ Years</strong>
-                <span>of academic excellence</span>
-              </div>
-            </div>
+      <div class="section-head text-center" data-aos="fade-up">
+        <span class="section-eyebrow"><i class="ri-team-line"></i> Organization</span>
+        <h2 class="section-title">Organizing Committee</h2>
+        <p class="section-subtitle mx-auto">The people leading ICP 2026, from patronage to on-ground coordination.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up">
+          <div class="committee-card">
+            <div class="committee-icon"><i class="ri-shield-star-line"></i></div>
+            <span class="committee-role">Chief Patron</span>
+            <h5>Prof. Dr. Farida Yesmin</h5>
+            <p>Vice-Chancellor, Khulna University</p>
           </div>
         </div>
-        <div class="col-lg-7">
-          <div data-aos="fade-left">
-            <span class="section-eyebrow"><i class="ri-information-line"></i> About The Conference</span>
-            <h2 class="section-title">Advancing Physics Research Through Global Collaboration</h2>
-            <p class="section-subtitle mb-4">
-              The International Conference on Physics 2026 (ICP 2026) is organized by the Physics Discipline,
-              Khulna University, to create a platform where researchers, academics, and students can exchange
-              ideas, present original research, and build lasting collaborations across the physical sciences.
-            </p>
-            <div class="about-highlights">
-              <div class="highlight-item">
-                <div class="dot-icon"><i class="ri-flag-line"></i></div>
-                <div>
-                  <h6>Our Mission</h6>
-                  <p>Foster interdisciplinary dialogue that accelerates discovery in modern physics.</p>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <div class="dot-icon"><i class="ri-focus-3-line"></i></div>
-                <div>
-                  <h6>Our Objective</h6>
-                  <p>Connect emerging researchers with established scientists from partner institutions.</p>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <div class="dot-icon"><i class="ri-team-line"></i></div>
-                <div>
-                  <h6>Who Attends</h6>
-                  <p>Faculty, postgraduate researchers, and industry scientists from 20+ countries.</p>
-                </div>
-              </div>
-              <div class="highlight-item">
-                <div class="dot-icon"><i class="ri-medal-line"></i></div>
-                <div>
-                  <h6>Recognition</h6>
-                  <p>Best paper and best poster awards presented across every research track.</p>
-                </div>
-              </div>
-            </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="committee-card">
+            <div class="committee-icon"><i class="ri-flag-2-line"></i></div>
+            <span class="committee-role">Convener</span>
+            <h5>Prof. Dr. A. K. M. Rahman</h5>
+            <p>Head, Physics Discipline, Khulna University</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="committee-card">
+            <div class="committee-icon"><i class="ri-user-settings-line"></i></div>
+            <span class="committee-role">Co-Convener</span>
+            <h5>Dr. Sultana Begum</h5>
+            <p>Associate Professor, Physics Discipline, KU</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="committee-card">
+            <div class="committee-icon"><i class="ri-group-line"></i></div>
+            <span class="committee-role">Member Secretary</span>
+            <h5>Dr. Imran Hossain</h5>
+            <p>Assistant Professor, Physics Discipline, KU</p>
           </div>
         </div>
       </div>
@@ -284,123 +268,106 @@
   <section class="section-pad bg-soft" id="topics">
     <div class="container">
       <div class="section-head text-center" data-aos="fade-up">
-        <span class="section-eyebrow"><i class="ri-list-check-2"></i> Research Tracks</span>
+        <span class="section-eyebrow"><i class="ri-list-check-2"></i> Conference Scope</span>
         <h2 class="section-title">Conference Topics</h2>
-        <p class="section-subtitle">Submit your original research across sixteen specialised tracks in physics and
-          applied sciences.</p>
+        <p class="section-subtitle mx-auto">Submit your original research across sixteen specialised tracks in physics
+          and applied sciences.</p>
       </div>
-      <div class="row g-4">
-        <!-- Topic cards -->
-        <div class="col-md-6 col-lg-3" data-aos="fade-up">
-          <div class="topic-card">
+      <div class="row g-3">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-atom-line"></i></div>
             <h5>Quantum Physics</h5>
-            <p>Quantum computing, entanglement, and foundational quantum theory research.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-          <div class="topic-card">
-            <div class="topic-icon"><i class="ri-space-ship-fill"></i></div>
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="30">
+          <div class="topic-list-item">
+            <div class="topic-icon"><i class="ri-radioactive-line"></i></div>
             <h5>Nuclear Physics</h5>
-            <p>Nuclear structure, reactions, radiation detection and applications.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="60">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-earth-line"></i></div>
             <h5>Astrophysics</h5>
-            <p>Stellar evolution, cosmology, gravitational waves and observational astronomy.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="90">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-focus-2-line"></i></div>
             <h5>Particle Physics</h5>
-            <p>Standard model tests, collider physics and beyond-standard-model searches.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-fire-line"></i></div>
             <h5>Plasma Physics</h5>
-            <p>Fusion research, space plasmas and plasma-based technologies.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="30">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-cpu-line"></i></div>
             <h5>Computational Physics</h5>
-            <p>Numerical modelling, simulations and high-performance computing methods.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="60">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-lightbulb-flash-line"></i></div>
             <h5>Optics</h5>
-            <p>Classical and quantum optics, imaging systems and optical instrumentation.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="90">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-flashlight-line"></i></div>
             <h5>Photonics</h5>
-            <p>Lasers, fiber optics, photonic devices and integrated photonics.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-shape-line"></i></div>
             <h5>Nanotechnology</h5>
-            <p>Nanomaterials, nanofabrication and nanoscale device engineering.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="30">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-drop-line"></i></div>
             <h5>Condensed Matter</h5>
-            <p>Solid-state physics, superconductivity and low-dimensional systems.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="60">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-heart-pulse-line"></i></div>
             <h5>Medical Physics</h5>
-            <p>Radiotherapy, medical imaging and diagnostic instrumentation research.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="90">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-sun-line"></i></div>
             <h5>Renewable Energy Physics</h5>
-            <p>Solar cells, energy storage and sustainable power generation.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-flashlight-fill"></i></div>
             <h5>High Energy Physics</h5>
-            <p>Collider experiments, cosmic rays and high-energy phenomena.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="30">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-stack-line"></i></div>
             <h5>Materials Science</h5>
-            <p>Novel materials characterization, synthesis and functional properties.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="60">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-brain-line"></i></div>
             <h5>Theoretical Physics</h5>
-            <p>Mathematical physics, field theory and foundational frameworks.</p>
           </div>
         </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-          <div class="topic-card">
+        <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="90">
+          <div class="topic-list-item">
             <div class="topic-icon"><i class="ri-terminal-box-line"></i></div>
             <h5>Scientific Computing</h5>
-            <p>Data-driven physics, machine learning applications and big-data analysis.</p>
           </div>
         </div>
       </div>
@@ -506,179 +473,30 @@
   <section class="section-pad bg-soft" id="speakers">
     <div class="container">
       <div class="section-head text-center" data-aos="fade-up">
-        <span class="section-eyebrow"><i class="ri-mic-2-line"></i> Distinguished Guests</span>
-        <h2 class="section-title">Speakers &amp; Guests</h2>
-        <p class="section-subtitle">Meet the guests of honour leading this year's conference.</p>
+        <span class="section-eyebrow"><i class="ri-mic-2-line"></i> Featured Voices</span>
+        <h2 class="section-title">Keynote &amp; Invited Speakers</h2>
+        <p class="section-subtitle mx-auto">Meet the researchers and academics leading this year's conference.</p>
       </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3" data-aos="fade-up">
-          <div class="speaker-card tilt-card">
-            <div class="speaker-avatar">
-              <img src="https://ku.ac.bd/discipline/uploads/discipline_head/Prof.%20Dr.%20M.%20Rashedur%20Rahman.jpg"
-                alt="Department Head portrait" loading="lazy" />
-            </div>
-            <h5>Prof. Dr. A. K. M. Rahman</h5>
-            <div class="speaker-role">Department Head</div>
-            <div class="speaker-desig">Physics Discipline, Khulna University</div>
-            <div class="speaker-social">
-              <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
-              <a href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="speaker-card tilt-card">
-            <div class="speaker-avatar"><img src="https://ku.ac.bd/uploads/1724929252.jpg" alt="Chief Guest portrait"
-                loading="lazy" />
-            </div>
-            <h5>Prof. Dr. Md. Rezaul Karim</h5>
-            <div class="speaker-role">Chief Guest</div>
-            <div class="speaker-desig">Vice-Chancellor, Khulna University</div>
-            <div class="speaker-social">
-              <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
-              <a href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="speaker-card tilt-card">
-            <div class="speaker-avatar"><img src="https://picsum.photos/id/1027/500/500" alt="Honorable guest portrait"
-                loading="lazy" /></div>
-            <h5>Dr. Michael Chen</h5>
-            <div class="speaker-role">Honorable Guest</div>
-            <div class="speaker-desig">Dept. of Physics, National University of Singapore</div>
-            <div class="speaker-social">
-              <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
-              <a href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="speaker-card tilt-card">
-            <div class="speaker-avatar"><img src="https://picsum.photos/id/1011/500/500" alt="Honorable guest portrait"
-                loading="lazy" /></div>
-            <h5>Dr. Anika Sharma</h5>
-            <div class="speaker-role">Honorable Guest</div>
-            <div class="speaker-desig">Indian Institute of Technology, Delhi</div>
-            <div class="speaker-social">
-              <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-              <a href="#" aria-label="Twitter"><i class="ri-twitter-x-fill"></i></a>
-              <a href="#" aria-label="Email"><i class="ri-mail-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============================ Gallery ============================ -->
-  <section class="section-pad" id="gallery">
-    <div class="container">
-      <div class="section-head text-center" data-aos="fade-up">
-        <span class="section-eyebrow"><i class="ri-image-2-line"></i> Moments</span>
-        <h2 class="section-title">Conference Gallery</h2>
-        <p class="section-subtitle">Highlights from previous editions of the conference.</p>
+      <div class="speaker-filters" data-aos="fade-up">
+        <button type="button" class="filter-btn active" data-filter="all">All Speakers</button>
+        <button type="button" class="filter-btn" data-filter="keynote">Keynote Speakers</button>
+        <button type="button" class="filter-btn" data-filter="invited">Invited Speakers</button>
       </div>
-      <div class="gallery-grid" data-aos="fade-up">
-        <div class="gallery-item">
-          <img src="https://srmrmp.edu.in/wp-content/uploads/2025/07/Approved-Poster-1-683x1024.jpg" data-full="https://srmrmp.edu.in/wp-content/uploads/2025/07/Approved-Poster-1-683x1024.jpg" alt="Research posters" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="ri-zoom-in-line"></i>
-            <span>Research Posters</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1sulxgQS9VlxMSg1TGHIvtaSPUrcoPtwjcDAc5KFnjrHNjCPEouKllcm&s=10" data-full="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn1sulxgQS9VlxMSg1TGHIvtaSPUrcoPtwjcDAc5KFnjrHNjCPEouKllcm&s=10" alt="Workshop" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="ri-zoom-in-line"></i>
-            <span>Workshop</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://media.prothomalo.com/prothomalo-english%2F2025-08-30%2Finlqpw5e%2FKhulna-Bondhushava-8.jpg" data-full="https://media.prothomalo.com/prothomalo-english%2F2025-08-30%2Finlqpw5e%2FKhulna-Bondhushava-8.jpg" alt="Conference hall" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="ri-zoom-in-line"></i>
-            <span>Conference Hall</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://media.prothomalo.com/prothomalo-english%2F2025-08-30%2Fl0011nyq%2FKhulna-Bondhushava-7.jpg" data-full="https://media.prothomalo.com/prothomalo-english%2F2025-08-30%2Fl0011nyq%2FKhulna-Bondhushava-7.jpg" alt="Audience" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="ri-zoom-in-line"></i>
-            <span>Audience</span>
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://ku.ac.bd/discipline/uploads/noticeboardfiles/IMG_4277.JPG" data-full="https://ku.ac.bd/discipline/uploads/noticeboardfiles/IMG_4277.JPG" alt="Presentation" loading="lazy" />
-          <div class="gallery-overlay">
-            <i class="ri-zoom-in-line"></i>
-            <span>Presentation</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============================ Why Attend ============================ -->
-  <section class="section-pad bg-soft" id="why-attend">
-    <div class="container">
-      <div class="section-head text-center" data-aos="fade-up">
-        <span class="section-eyebrow"><i class="ri-question-line"></i> Reasons</span>
-        <h2 class="section-title">Why Attend ICP 2026</h2>
-        <p class="section-subtitle">A conference designed to give every delegate real, lasting value.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
-          <div class="why-card">
-            <div class="why-icon"><i class="ri-group-2-line"></i></div>
-            <h5>Networking</h5>
-            <p>Connect with physicists and researchers from over 20 countries.</p>
-          </div>
+      <div class="speaker-carousel-wrap" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper speakers-swiper">
+          <div class="swiper-wrapper" id="speakersWrapper"><!-- Slides injected by script.js --></div>
         </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="why-card">
-            <div class="why-icon"><i class="ri-links-line"></i></div>
-            <h5>Research Collaboration</h5>
-            <p>Find partners for cross-institutional research and joint publications.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="why-card">
-            <div class="why-icon"><i class="ri-mic-2-line"></i></div>
-            <h5>Expert Talks</h5>
-            <p>Hear directly from leading names across every field of physics.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up">
-          <div class="why-card">
-            <div class="why-icon"><i class="ri-earth-line"></i></div>
-            <h5>International Exposure</h5>
-            <p>Present your work to a genuinely global academic audience.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="why-card">
-            <div class="why-icon"><i class="ri-book-open-line"></i></div>
-            <h5>Publication Opportunity</h5>
-            <p>Selected papers are fast-tracked for journal and proceedings publication.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="why-card">
-            <div class="why-icon"><i class="ri-lightbulb-flash-line"></i></div>
-            <h5>Innovation</h5>
-            <p>Discover emerging tools, methods and technologies shaping physics research.</p>
-          </div>
-        </div>
+        <div class="swiper-button-prev speakers-nav speakers-prev"></div>
+        <div class="swiper-button-next speakers-nav speakers-next"></div>
+        <div class="swiper-pagination speakers-pagination"></div>
       </div>
     </div>
   </section>
 
   <!-- ============================ Registration CTA ============================ -->
-  <!-- <section class="section-pad" id="registration">
+  <section class="section-pad" id="registration">
     <div class="container">
       <div class="registration-banner" data-aos="zoom-in">
         <h2>Secure Your Seat at ICP 2026</h2>
@@ -688,7 +506,7 @@
         <div class="reg-deadline"><i class="ri-timer-flash-line"></i> Early-bird deadline: 30 September 2026</div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- ============================ Venue ============================ -->
   <section class="section-pad bg-soft" id="venue">
@@ -733,110 +551,28 @@
       <div class="swiper sponsors-swiper" data-aos="fade-up">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="sponsor-slide">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/en/1/12/International_Union_of_Pure_and_Applied_Physics_logo.png"
-                alt="University partner logo" loading="lazy" />
-            </div>
+            <div class="sponsor-slide"><img src="https://picsum.photos/id/20/160/60" alt="University partner logo"
+                loading="lazy" /></div>
           </div>
           <div class="swiper-slide">
-            <div class="sponsor-slide">
-              <img
-                src="https://conference.tesolbangladesh.org/wp-content/uploads/2025/09/305263331_443367154483353_5087386898500177673_n-removebg-preview-1.png"
-                alt="Research institute logo" loading="lazy" />
-            </div>
+            <div class="sponsor-slide"><img src="https://picsum.photos/id/21/160/60" alt="Research institute logo"
+                loading="lazy" /></div>
           </div>
           <div class="swiper-slide">
-            <div class="sponsor-slide">
-              <img src="https://images.seeklogo.com/logo-png/46/2/nuclear-energy-institute-logo-png_seeklogo-461634.png"
-                alt="Industry partner logo" loading="lazy" />
-            </div>
+            <div class="sponsor-slide"><img src="https://picsum.photos/id/22/160/60" alt="Industry partner logo"
+                loading="lazy" /></div>
           </div>
           <div class="swiper-slide">
-            <div class="sponsor-slide">
-              <img src="https://cust.edu.bd/wp-content/uploads/2014/10/logo-univeristy-1x.png"
-                alt="Research institute logo" loading="lazy" />
-            </div>
+            <div class="sponsor-slide"><img src="https://picsum.photos/id/23/160/60" alt="Research institute logo"
+                loading="lazy" /></div>
           </div>
           <div class="swiper-slide">
-            <div class="sponsor-slide">
-              <img src="https://en.chandpurtimes.com/wp-content/uploads/2020/01/education.jpg"
-                alt="University partner logo" loading="lazy" />
-            </div>
+            <div class="sponsor-slide"><img src="https://picsum.photos/id/24/160/60" alt="University partner logo"
+                loading="lazy" /></div>
           </div>
           <div class="swiper-slide">
-            <div class="sponsor-slide">
-              <img
-                src="https://images.seeklogo.com/logo-png/42/2/bangladesh-atomic-energy-commission-logo-png_seeklogo-427706.png"
-                alt="Industry partner logo" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================ FAQ ============================ -->
-  <section class="section-pad bg-soft" id="faq">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-9">
-          <div class="section-head text-center" data-aos="fade-up">
-            <span class="section-eyebrow"><i class="ri-question-answer-line"></i> Help</span>
-            <h2 class="section-title">Frequently Asked Questions</h2>
-          </div>
-          <div class="accordion faq-accordion" id="faqAccordion" data-aos="fade-up">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How do I
-                  register for ICP 2026?</button>
-              </h2>
-              <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Registration is completed online through the registration form on this page.
-                  You'll receive a confirmation email with payment instructions and your delegate ID.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq2">What is the process for paper submission?</button>
-              </h2>
-              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Authors submit an abstract for review, and upon acceptance, the full paper
-                  following the conference template. Submission details are shared with all registered participants.
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq3">Will I receive a certificate?</button>
-              </h2>
-              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Yes, every registered delegate receives a certificate of participation, and
-                  presenters receive a separate certificate of presentation.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq4">Is accommodation provided?</button>
-              </h2>
-              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">On-campus and nearby hotel accommodation options are available at discounted
-                  rates for outstation delegates — details are shared after registration.</div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#faq5">What is the conference registration fee?</button>
-              </h2>
-              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Fees vary by delegate category (student, faculty, industry, international)
-                  and are lower for early-bird registrations. Full fee details are available on request.</div>
-              </div>
-            </div>
+            <div class="sponsor-slide"><img src="https://picsum.photos/id/25/160/60" alt="Industry partner logo"
+                loading="lazy" /></div>
           </div>
         </div>
       </div>
@@ -937,8 +673,8 @@
         <div class="col-lg-2 col-6">
           <h6>Quick Links</h6>
           <ul class="footer-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#topics">Topics</a></li>
+            <li><a href="#topics">Conference Scope</a></li>
+            <li><a href="#committee">Committee</a></li>
             <li><a href="#speakers">Speakers</a></li>
             <li><a href="#schedule">Schedule</a></li>
           </ul>
@@ -946,10 +682,10 @@
         <div class="col-lg-2 col-6">
           <h6>More</h6>
           <ul class="footer-links">
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#registration">Registration</a></li>
+            <li><a href="#">Author Guidelines</a></li>
+            <li><a href="#">Registration Fees</a></li>
             <li><a href="#venue">Venue</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="col-lg-4">
@@ -970,19 +706,12 @@
   <!-- Back to top -->
   <a href="#" class="back-to-top" aria-label="Back to top"><i class="ri-arrow-up-line"></i></a>
 
-  <!-- Lightbox -->
-  <div class="lightbox-overlay">
-    <span class="lightbox-close"><i class="ri-close-line"></i></span>
-    <img src="" alt="Gallery preview" />
-  </div>
-
   <!-- ============================ Scripts ============================ -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
 
   <script src="assets/js/script.js"></script>
