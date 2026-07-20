@@ -30,23 +30,34 @@
   /* ---------------------------------------------------------------------
      2. Sticky Navbar on Scroll
      --------------------------------------------------------------------- */
-  const $navbar = $(".navbar-main");
-  function handleNavbarScroll() {
-    if ($(window).scrollTop() > 60) {
-      $navbar.addClass("scrolled");
-    } else {
-      $navbar.removeClass("scrolled");
-    }
-  }
-  handleNavbarScroll();
-  $(window).on("scroll", handleNavbarScroll);
+  // const $navbar = $(".navbar-main");
+  // function handleNavbarScroll() {
+  //   if ($(window).scrollTop() > 60) {
+  //     $navbar.addClass("scrolled");
+  //   } else {
+  //     $navbar.removeClass("scrolled");
+  //   }
+  // }
+  // handleNavbarScroll();
+  // $(window).on("scroll", handleNavbarScroll);
 
   // Close mobile menu after clicking a link
-  $(".nav-link-custom").on("click", function () {
-    const $collapse = $(".navbar-collapse");
-    if ($collapse.hasClass("show")) {
-      bootstrap.Collapse.getOrCreateInstance($collapse[0]).hide();
-    }
+  // $(".nav-link-custom").on("click", function () {
+  //   const $collapse = $(".navbar-collapse");
+  //   if ($collapse.hasClass("show")) {
+  //     bootstrap.Collapse.getOrCreateInstance($collapse[0]).hide();
+  //   }
+  // });
+
+  // News Ticker
+  $('.marquee').marquee({
+    duration: 18000,
+    gap: 80,
+    delayBeforeStart: 0,
+    direction: 'left',
+    duplicated: true,
+    pauseOnHover: true,
+    startVisible: true
   });
 
   // Active link highlight on scroll (scrollspy-lite)

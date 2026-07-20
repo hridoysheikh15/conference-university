@@ -40,7 +40,7 @@
   </div>
 
   <!-- ============================ Navbar ============================ -->
-  <nav class="navbar navbar-expand-lg navbar-main">
+  <nav class="navbar navbar-expand-lg navbar-main scrolled">
     <div class="container">
       <a class="navbar-brand navbar-brand-group" href="./index.html">
         <img src="assets/image/logo.png" alt="Physics Discipline Logo" onerror="this.style.display='none'" />
@@ -62,7 +62,8 @@
           <li class="nav-item"><a class="nav-link nav-link-custom" href="#speakers">Speakers</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link nav-link-custom dropdown-toggle" href="#" id="authorGuidelineDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">Author Guideline</a>
+              data-bs-toggle="dropdown" aria-expanded="false">Author Guideline <i
+                class="ri-arrow-down-s-line fs-5"></i></a>
             <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="authorGuidelineDropdown">
               <li><a class="dropdown-item" href="#author-guidelines">Author Guidelines</a></li>
               <li><a class="dropdown-item" href="#registration-fees">Registration Fees</a></li>
@@ -79,55 +80,72 @@
     </div>
   </nav>
 
+  <!-- ============================ New Ticker ============================ -->
+  <div class="news-ticker card-body">
+    <div class="ticker-label">
+      <strong>Latest News</strong>
+    </div>
+
+    <div class="marquee">
+      <a href="#">Admission Open for Fall 2026</a>
+      <span>|</span>
+
+      <a href="#">International Physics Conference Registration Started</a>
+      <span>|</span>
+
+      <a href="#">Scholarship applications close on August 15</a>
+      <span>|</span>
+
+      <a href="#">Campus recruitment drive next week</a>
+    </div>
+  </div>
+
   <!-- ============================ Hero ============================ -->
   <header class="hero" id="home">
     <div class="hero-bg-image"
-      style="background-image: url('https://ku.ac.bd/discipline/uploads/noticeboardfiles/IMG_4277.JPG');"></div>
+      style="background-image: url('https://i.postimg.cc/Y25xb4X2/unnamed.webp');"></div>
     <div class="hero-noise"></div>
-    <div class="container hero-content">
-      <div class="row justify-content-center">
-        <div class="col-lg-9 text-center">
-          <span class="hero-badge" data-aos="fade-up">
-            <span class="dot"></span> International Physics Conference 2026
-          </span>
-          <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-            Physics Conference
-            <span class="accent">Khulna University</span>
-          </h1>
+    <div class="hero-shadow"></div>
+    <div class="px-4 px-lg-5 hero-content">
+      <span class="hero-badge" data-aos="fade-up">
+        <span class="dot"></span> International Physics Conference 2026
+      </span>
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+        Physics Conference
+        <span class="accent">Khulna University</span>
+      </h1>
 
-          <div class="hero-info-row" data-aos="fade-up" data-aos-delay="150">
-            <div class="hero-info-item">
-              <i class="ri-calendar-2-line"></i>
-              <div>
-                <span class="hero-info-label">Date</span>
-                <span class="hero-info-value">10–12 December, 2026</span>
-              </div>
-            </div>
-            <div class="hero-info-divider"></div>
-            <div class="hero-info-item">
-              <i class="ri-map-pin-line"></i>
-              <div>
-                <span class="hero-info-label">Venue</span>
-                <span class="hero-info-value">Khulna University, Bangladesh</span>
-              </div>
-            </div>
-          </div>
-
-          <p class="hero-subtitle mx-auto" data-aos="fade-up" data-aos-delay="200">
-            ICP 2026 brings together physicists, researchers and students from across the globe to
-            share discoveries in <span id="typed-topics" class="fw-semibold text-white"></span> — three days
-            of keynotes, technical sessions and collaboration hosted by the Physics Discipline, Khulna University.
-          </p>
-          <div class="hero-actions justify-content-center" data-aos="fade-up" data-aos-delay="300">
-            <a href="https://example.com/submit-abstract" target="_blank" rel="noopener noreferrer"
-              class="btn btn-submit-abstract">
-              <i class="ri-file-upload-line me-1"></i> Submit Abstract Now
-            </a>
-            <!-- <a href="#schedule" class="btn btn-outline-brand">
-              <i class="ri-calendar-event-line me-1"></i> View Schedule
-            </a> -->
+      <div class="hero-info-row" data-aos="fade-up" data-aos-delay="150">
+        <div class="hero-info-item">
+          <i class="ri-calendar-2-line"></i>
+          <div>
+            <span class="hero-info-label">Date</span>
+            <span class="hero-info-value">10–12 December, 2026</span>
           </div>
         </div>
+        <div class="hero-info-divider"></div>
+        <div class="hero-info-item">
+          <i class="ri-map-pin-line"></i>
+          <div>
+            <span class="hero-info-label">Venue</span>
+            <span class="hero-info-value">Khulna University, Bangladesh</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+        ICP 2026 brings together physicists, researchers and students from across the globe to
+        share discoveries in <span id="typed-topics" class="fw-semibold text-white"></span> — three days
+        of keynotes, technical sessions and collaboration hosted by the Physics Discipline, Khulna University.
+      </p>
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://example.com/submit-abstract" target="_blank" rel="noopener noreferrer"
+          class="btn btn-submit-abstract">
+          <i class="ri-file-upload-line me-1"></i> Submit Abstract Now
+        </a>
+        <!-- <a href="#schedule" class="btn btn-outline-brand">
+              <i class="ri-calendar-event-line me-1"></i> View Schedule
+            </a> -->
       </div>
     </div>
     <div class="wave-divider">
@@ -598,11 +616,11 @@
         </p>
         <div class="d-flex gap-3 align-items-center justify-content-center flex-wrap">
           <a href="#contact" class="btn btn-brand mt-4">
-            <i class="ri-user-add-line me-1"></i> 
+            <i class="ri-user-add-line me-1"></i>
             Register Now
           </a>
           <div class="reg-deadline text-white">
-            <i class="ri-timer-flash-line"></i> 
+            <i class="ri-timer-flash-line"></i>
             Early-bird deadline: 30 September 2026
           </div>
         </div>
@@ -657,8 +675,8 @@
           <div class="stay-card">
             <span class="stay-tag recommended">Recommended</span>
             <div class="stay-image">
-              <img src="https://picsum.photos/id/164/500/340"
-                alt="Khulna University on-campus guest house" loading="lazy" />
+              <img src="https://picsum.photos/id/164/500/340" alt="Khulna University on-campus guest house"
+                loading="lazy" />
             </div>
             <div class="stay-body">
               <h5>KU Guest House</h5>
@@ -672,8 +690,7 @@
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="stay-card">
             <div class="stay-image">
-              <img src="https://picsum.photos/id/1029/500/340" alt="Hotel near Khulna University"
-                loading="lazy" />
+              <img src="https://picsum.photos/id/1029/500/340" alt="Hotel near Khulna University" loading="lazy" />
             </div>
             <div class="stay-body">
               <h5>Hotel Royal International</h5>
@@ -686,8 +703,7 @@
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="stay-card">
             <div class="stay-image">
-              <img src="https://picsum.photos/id/1080/500/340" alt="Budget guest house in Khulna"
-                loading="lazy" />
+              <img src="https://picsum.photos/id/1080/500/340" alt="Budget guest house in Khulna" loading="lazy" />
             </div>
             <div class="stay-body">
               <h5>Sundarban Guest House</h5>
@@ -750,7 +766,7 @@
         <span class="section-eyebrow"><i class="ri-customer-service-2-line"></i> Get In Touch</span>
         <h2 class="section-title">Contact Us</h2>
       </div>
-      <div class="row g-4">        
+      <div class="row g-4">
         <div class="col-lg-3">
           <div class="contact-info-card" data-aos="fade-up">
             <div class="contact-item">
@@ -909,7 +925,7 @@
   <script src="./assets/js/swiper-bundle.js"></script>
   <script src="./assets/js/typed.js"></script>
   <script src="./assets/js/countUp.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 

@@ -315,7 +315,7 @@ ul {
   font-weight: 500;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.9) !important;
-  padding: 0.5rem 1rem !important;
+  padding: 0.5rem 0.75rem !important;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -436,6 +436,45 @@ ul {
 }
 
 /* =========================================================================
+   News Ticker Section
+   ========================================================================= */
+.news-ticker {
+  padding-top: 75px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  background: #fff;
+  background-color: #fff;
+  color: #fff;
+}
+
+.ticker-label {
+  background: var(--blue-700);
+  color: #fff;
+  padding: 8px 18px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.marquee {
+  flex: 1;
+  overflow: hidden;
+}
+
+.marquee a {
+  color: #222;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.marquee span {
+  color: #999;
+}
+
+/* =========================================================================
    Hero Section
    ========================================================================= */
 .hero {
@@ -474,6 +513,11 @@ ul {
       transparent 45%
     ),
     radial-gradient(circle at 85% 80%, rgba(30, 90, 168, 0.35), transparent 50%);
+}
+.hero-shadow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 25%, rgba(0, 0, 0, 0));
 }
 .hero-content {
   position: relative;
